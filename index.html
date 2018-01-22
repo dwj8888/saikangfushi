@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="images/skfs.ico" />
+    <title>赛康服饰</title>
+</head>
+<style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            list-style:none;
+            text-decoration:none;
+        }
+        body{
+            height:auto;
+        }
+     .rocket{
+            position:fixed;
+            right:10px;
+            bottom:70px;
+            width:148.67px;
+            height:249px;
+            background:url("images/rocket.png") no-repeat;
+            text-indent:-999999em;
+            z-index:8;
+        }
+        .rocket:hover{
+            background-position:-148.67px 0px;
+        }
+        .sildernav{
+            width: 200px;
+            height:515px;
+            background:#fff;
+            border:4px solid black;
+            position:absolute;
+            top:50%;
+            left:0;
+            margin-top:-258px;
+            z-index:2;
+        }
+        .sildernav .qvxiao{
+            width: 30px;
+            height:30px;
+            background:red;
+            float:right;
+            text-align:center;
+            line-height:30px;
+           font-size:24px;
+            font-family: 微软雅黑;
+        }
+        .sildernav .insilder h3{
+            font-size:16px;
+            font-family: 宋体;
+            text-align:center;
+            margin:20px auto;
+        }
+        .sildernav .insilder .dh{
+            width: 160px;
+            height:50px;
+           /*  background:yellow; */
+            margin: 30px auto;
+        }
+        .sildernav .insilder .dh i{
+            float:left;
+            display: block;
+            width: 30px;
+            height:30px;
+            background:url('images/dh.fw.png') center center;
+            margin-top:10px;
+            background-size:cover;
+        }
+        .sildernav .insilder .dh span{
+            display: block;
+            font-size:14px;
+            font-family: 宋体;
+            text-align:center;
+            line-height:25px;
+            margin-top:10px;
+        }
+        .sildernav .insilder .dh p{
+            font-size:18px;
+            font-family: 宋体;
+            font-weight:bold;
+            color:red;
+            line-height:20px;
+            text-align:center;
+        }
+       .sildernav .insilder .xx{
+            width: 160px;
+            height:200px;
+            margin:0 auto;
+        }
+        .sildernav .insilder .xx span{
+            display: block;
+            margin-top:15px;
+            font-size:12px;
+            font-family: 微软雅黑;
+        }
+        .sildernav .insilder .xx span b{
+            font-size:14px;
+            font-family: 微软雅黑;
+        }
+        .sildernav .insilder .kf{
+            width: 142px;
+            height:170px;
+            margin:10px auto;
+            margin-top:10px;
+            background:yellow;
+            background:url('images/kh.fw.png') center center;
+            background-size:contain;
+        }
+        .header{
+            position:relative;
+            top:0px;
+            height:750px;
+            background:url('images/bj.png');
+        }
+        nav{
+            height:94px;
+            width: 100%;
+            line-height:80px;
+            background:url('images/dht.jpg') repeat;
+            color:#ffffff;
+            overflow:hidden;
+        }
+        nav h1{
+            float:left;
+            font-size:40px;
+            line-height:100px;
+            padding-left:30px;
+        }
+        nav .in{
+            float:right;
+            position:relative;
+            top:14px;
+            width: 810px;
+            height:80px;
+         }
+         nav .in p{
+            width:0px;
+            height:0px;
+            display:block;
+         }
+        nav .in .l{
+            float:left;
+            width:0px;
+            height:0px;
+            display:block;
+            border-bottom:40px solid #7F9240;
+            border-top:40px solid#7F9240;
+            border-left:40px solid transparent;
+            border-right:40px solid #7F9240;
+        }
+        nav .in ul{
+            width:650px;
+            height:80px;
+            float:left;
+            background-color:orange;
+        }
+         nav .in .r{
+            float:right;
+            width:0px;
+            height:0px;
+            display:block;
+            border-bottom:40px solid #94A344;
+            border-top:40px solid #94A344;
+            border-left:40px solid #94A344;
+            border-right:40px solid transparent;
+        }
+        nav .in ul li{
+            float:left;
+            height:80px;
+            width: 130px;
+            line-height:80px;
+            font-size:18px;
+            background:#195591;
+            position:relative;
+        }
+        nav .in ul li a{
+            color:#ffffff;
+            height:80px;
+            width: 130px;
+            display: block;
+            text-align:center;
+            background:url('images/gr.jpg') repeat;
+            position:absolute;
+            top:0px;
+            left:0;
+            z-index:2;
+        }
+        nav .in ul li i{
+            width: 0px;
+            height:0px;
+            display: block;
+            background:red;
+        }
+        nav .in ul li .left{
+            position:absolute;
+            bottom:-14px;
+            left:0;
+            z-index:1;
+             border-left:7px solid #195591;
+            border-right:7px solid orange;
+            border-top:7px solid orange;
+            border-bottom:7px solid #195591;
+            opacity:0.7;
+        }
+        nav .in ul li .right{
+            position:absolute;
+            bottom:-14px;
+            right:0;
+            z-index:1;
+            border-left:7px solid orange;
+            border-right:7px solid #195591;
+            border-top:7px solid orange;
+            border-bottom:7px solid #195591;
+            opacity:0.7;
+        }
+        nav .in ul li:hover a{
+            top:-14px;
+            width: 130px;
+            height:80px;
+            line-height:80px;
+            transition: all 0.2s linear;
+        }
+        nav .in ul li:hover i{
+            bottom: 0px;
+            transition: all 0.2s linear;
+        }
+        .inheader{
+            width: 600px;
+            height:400px;
+           /*  background:red; */
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-200px;
+            margin-left:-300px;
+            overflow:hidden;
+        }
+        .inheader .english{
+           font-size:28px;
+           font-weight:bold;
+           /* font-family:"黑体"; */
+           font-family:verdana;
+           text-align:center;
+           color:#fff;
+        }
+    .inheader .china{
+       font-size:48px;
+       font-weight:bold;
+       font-family:"微軟正黑體";
+       text-align:center;
+       color:#fff;
+       position:absolute; left:-288px; top:50px;
+       -webkit-transition:left 0s ease;
+        }
+    .inheader .china span{
+       font-size:80px;
+       font-family:"蘋果儷中黑";
+       color:#f1501a;
+    }
+    .inheader a{
+       font-size:18px;
+       font-family:"宋体";
+       display: block;
+       padding-top:110px;
+       text-align:center;
+       color:#fff;
+
+
+    }
+    .inheader .jieshao p{
+       float:left;
+        border-right:1px dashed #fff;
+        width: 197px;
+        height: 150px;
+        display: block;
+        text-align: center;
+        position: relative;
+        top:60px;
+        line-height: 250px;
+        text-decoration: none;
+        font-size: 12px;
+        color: #4F4F4F;
+        color:#fff;
+    }
+
+    .inheader .jieshao p i{
+        position:absolute;
+        top:40px;
+        left:50%;
+        transform:translate(-50%,0%);
+        height:50px;
+        width:50px;
+        border-radius:20%;
+        display: block;
+        background:url('images/jian.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .inheader .jieshao p:nth-child(2) i{
+        background:url('images/zhen.jpg') no-repeat center center;
+        background-size:cover;
+    }
+    .inheader .jieshao p:nth-child(3) i{
+        background:url('images/chi.jpg') no-repeat center center;
+        background-size:cover;
+    }
+      .page2{
+        width: 100%;
+        height:700px;
+    }
+    .page2 .title2{
+        padding-top:100px;
+    }
+    .page2 .title2 h2{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #333333;
+        text-align:center;
+    }
+    .page2 .title2 i{
+        display: block;
+        width: 80px;
+        height:5px;
+        background:yellow;
+        text-align:center;
+        margin-top:20px;
+        margin-left:47%;
+    }
+    .page2 .title2 p{
+        font-size:15px;
+        font-family: 微软雅黑;
+        text-align:center;
+        margin-top:20px;
+    }
+    .page2 .tedian2{
+        width: 1160px;
+        margin: 180px auto;
+        padding-bottom:200px;
+        position:relative;
+        bottom:0;
+    }
+    .page2 .tedian2 .intd2{
+        position:absolute; left:0; bottom:-180px;
+        -webkit-transition:all 0s ease;
+    }
+    .page2 .tedian2 .intd2 div{
+        width: 290px;
+        overflow:hidden;
+        float:left;
+        border-right:20px solid #fff;
+        box-sizing: border-box;
+    }
+    .page2 .tedian2 .intd2 div i{
+        width: 120px;
+        height:125px;
+        display: block;
+    }
+    .page2 .tedian2 .intd2 div:nth-child(1) i{
+        background:url('images/r1.png')center center;
+        background-size:cover;
+        margin:0 auto;
+    }
+    .page2 .tedian2 .intd2 div:nth-child(2) i{
+        background:url('images/r2.png')center center;
+        background-size:cover;
+        margin:0 auto;
+    }
+    .page2 .tedian2 .intd2 div:nth-child(3) i{
+        background:url('images/r3.png')center center;
+        background-size:cover;
+        margin:0 auto;
+    }
+    .page2 .tedian2 .intd2 div:nth-child(4) i{
+        background:url('images/r4.png')center center;
+        background-size:cover;
+        margin:0 auto;
+    }
+      .page2 .tedian2 .intd2 div p{
+         font-size:20px;
+         line-height:50px;
+         font-family: 微软雅黑;
+         text-align:center;
+         color:#3D444F;
+    }
+    .page2 .tedian2 .intd2 div span{
+        display: block;
+         font-size:14px;
+         line-height:24px;
+         font-family: 微软雅黑;
+         text-align:center;
+         color:#646A75;
+    }
+    .page3{
+        width: 100%;
+        height:800px;
+        background-color:rgba(247,249,250,0.8);
+    }
+    .page3 .title3{
+        padding-top:100px;
+    }
+    .page3 .title3 h2{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #333333;
+        text-align:center;
+    }
+    .page3 .title3 i{
+        display: block;
+        width: 80px;
+        height:5px;
+        background:yellow;
+        text-align:center;
+        margin-top:20px;
+        margin-left:47%;
+    }
+    .page3 .title3 p{
+        font-size:15px;
+        font-family: 微软雅黑;
+        text-align:center;
+        margin-top:20px;
+    }
+    .page3 .tedian3{
+        width: 945px;
+        height:400px;
+        margin: 0px auto;
+        margin-top:100px;
+    }
+    .page3 .tedian3 div:nth-child(1):hover{
+        opacity:1;
+    }
+    .page3 .tedian3 div:nth-child(2):hover{
+        opacity:1;
+    }
+    .page3 .tedian3 div:nth-child(3):hover{
+        opacity:1;
+    }
+    .page3 .tedian3 div{
+        width: 315px;
+        height:400px;
+        background:pink;
+        float:left;
+        border-right:30px solid #fff;
+        box-sizing: border-box;
+        position:relative;
+        opacity:0.7;
+        display: none;
+    }
+    .page3 .tedian3 div i{
+        width: 285px;
+        height:400px;
+        display: block;
+        background-size:cover;
+        margin:0 auto;
+    }
+    .page3 .tedian3 div:nth-child(1) i{
+
+        background:url('images/3.jpg')center center;
+    }
+    .page3 .tedian3 div:nth-child(2) i{
+
+        background:url('images/GZ-001fu.jpg')center center;
+    }
+    .page3 .tedian3 div:nth-child(3) i{
+
+        background:url('images/XCT-021fu.jpg')center center;
+    }
+    .page3 .tedian3 div p{
+         width: 100%;
+         height:50px;
+
+         background:pink;
+         font-size:30px;
+         line-height:50px;
+         font-family: 微软雅黑;
+         text-align:center;
+         color:#3D444F;
+         position:absolute;
+         bottom:0px;
+    }
+    .page3 .tedian3 div span{
+         display: block;
+         font-size:14px;
+         line-height:24px;
+         font-family: 微软雅黑;
+         text-align:center;
+         color:#646A75;
+    }
+    .page4{
+        width: 100%;
+        height:800px;
+        background:#ccc;
+        position:relative;
+    }
+    .page4 .title4{
+        padding-top:100px;
+    }
+    .page4 .title4 h2{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #333333;
+        text-align:center;
+    }
+    .page4 .title4 i{
+        display: block;
+        width: 80px;
+        height:5px;
+        background:yellow;
+        text-align:center;
+        margin-top:20px;
+        margin-left:47%;
+    }
+    .page4 .title4 p{
+        font-size:15px;
+        font-family: 微软雅黑;
+        text-align:center;
+        margin-top:20px;
+    }
+    .page4 .btn{
+        width: 600px;
+        height: 52px;
+        position:relative;
+        top:0;
+        left:0;
+        margin-top:50px;
+        margin-left:400px;
+    }
+    .page4 .btn a{
+        width: 200px;
+        height:50px;
+        margin-left:50px;
+        margin-right:50px;
+        display: block;
+        border-radius:20px;
+        line-height:50px;
+        text-align:center;
+        font-weight:bold;
+         font-size:18px;
+        font-family: 微软雅黑;
+    }
+    .page4 .btn .smls{
+        width: 200px;
+        height:52px;
+        margin-left:50px;
+        margin-right:50px;
+        display: block;
+        border-radius:20px;
+        line-height:52px;
+        text-align:center;
+        font-weight:bold;
+         font-size:18px;
+        font-family: 微软雅黑;
+        color:#fff;
+        background:#ef4f19;
+        float:left;
+    }
+    .page4 .btn .smls:hover{
+        border:1px solid #ef4f19;
+        height:52px;
+        background:#ccc;
+        color:#ef4f19;
+        box-sizing:border-box;
+    }
+    .page4 .btn .zxxk{
+        width: 200px;
+        height:52px;
+        margin-left:50px;
+        margin-right:50px;
+        display: block;
+        border-radius:20px;
+        line-height:52px;
+        text-align:center;
+        font-weight:bold;
+         font-size:18px;
+        font-family: 微软雅黑;
+        float:left;
+        background:#fff;
+        color:black;
+    }
+    .page4 .btn .zxxk:hover{
+        border:1px solid #ef4f19;
+        height:52px;
+        background:#ef4f19;
+        color:#fff;
+        box-sizing:border-box;
+    }
+    .page4 .lianxi{
+        width: 300px;
+        height:187px;
+        background:url('images/timg2.jpg') no-repeat;
+        position:absolute;
+        top:50px;
+        left:230px;
+        color:#fff;
+        font-weight:bold;
+        border-radius:10px;
+        display: block;
+    }
+       @-webkit-keyframes lianxi {
+            from { -webkit-box-shadow: 0 0 20px #fff; }
+            50% { -webkit-box-shadow: 0 0 20px blue; }
+            to { -webkit-box-shadow: 0 0 20px yellow; }
+        }
+    .lianxi{
+        -webkit-animation-name:lianxi;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        }
+    .page4 .lianxi p{
+         font-size:18px;
+         font-family: 微软雅黑;
+         font-weight:bold;
+         text-align:center;
+         margin-top:10px;
+    }
+    .page4 .lianxi span{
+        font-size:14px;
+        font-family: 微软雅黑;
+        display: block;
+        text-align:center;
+        line-height:25px;
+        margin-top:20px;
+    }
+    .page4 .tedian4{
+        margin:0 auto;
+        margin-top:50px;
+        text-align:center;
+        width: 1000px;
+        height:440px;
+        background:url('images/23.jpg');
+    }
+    .footer{
+        width: 100%;
+        height:34px;
+        background:url('images/dht.jpg') repeat;
+        color:#fff;
+        padding:30px 0;
+        }
+    .footer div{
+        width: 500px;
+        height:50px;
+        margin:0 auto;
+        text-align:center;
+        }
+    .footer a{
+        color:#fff;
+        padding:0 5px;
+        text-align:center;
+        }
+    .footer p{
+        color:#fff;
+        margin-top:10px;
+        }
+</style>
+</style>
+<body>
+    <a href="javascript:void(0);" class="rocket">返回顶部</a>
+    <div class="sildernav">
+        <div class="qvxiao">X</div>
+        <div class="insilder">
+            <h3>联系赛康制服</h3>
+            <div class="dh">
+                <i></i>
+                <span>定制服务热线</span>
+                <p>021-64522388</p>
+            </div>
+            <div class="xx">
+                <span>
+                    <b>电话</b></br>
+                    021-64522388</br>
+                </span>
+                <span>
+                    <b>QQ</b></br>
+                    623712138</br>
+                </span>
+                <span>
+                    <b>邮箱</b></br>
+                    623712138@qq.com</br>
+                </span>
+                <span>
+                    <b>地址</b></br>
+                    上海市闵行区</br>
+                </span>
+                <div class="kf">
+                  <!--   <img src="images/kh.fw.png" alt="" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <h1>赛康制服</h1>
+        <div class="in">
+            <p class="l"></p>
+            <ul>
+                <li><i class="left"></i><a href="index.html">企业首页</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="product.html">产品信息</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="flowpath.html">定制流程</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="introduce.html">公司介绍</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="lianxi.html">联系我们</a><i class="right"></i></li>
+            </ul>
+            <p class="r"></p>
+        </div>
+    </nav >
+    <div class="header">
+
+        <div class="inheader">
+            <div class="english">CLOUD SOFTWARE</div>
+            <div class="china" id="china">服装行业<span>领导者</span></div>
+            <a href="">专注服装二十年</a>
+            <div class="jieshao">
+                <p><i></i>优秀裁剪制版师</p>
+                <p><i></i>一针一线显品质</p>
+                <p><i></i>上门量身定制</p>
+            </div>
+        </div>
+    </div>
+    <div class="page2">
+        <div class="title2">
+            <h2>精心细作，满足你对高端品质所有的需求</h2>
+            <i></i>
+             <p>精心细作和品质保证是赛康服饰的两大特点</p>
+        </div>
+        <div class="tedian2">
+            <div class="intd2">
+                <div>
+                <i></i>
+                <p>制作工艺</p>
+                <span>公司采用德国制衣机制，打造先进的制衣技术</span>
+            </div>
+            <div>
+                <i></i>
+                <p>精选面料</p>
+                <span>我们从面料源头开始抓起，为你提供优质的面料；</span>
+            </div>
+            <div>
+                <i></i>
+                <p>用心服务</p>
+                <span>提供上门量身服务，专业量身定制，打造高品质制服；</span>
+            </div>
+            <div>
+                <i></i>
+                <p>快速发货</p>
+                <span>工厂直接生产，送货上门，为你节约更多的时间；</span>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="page3">
+        <div class="title3">
+            <h2>精选面料，引进先进技术，质量层层把关</h2>
+            <i></i>
+            <p>每一道工序，用心在做，只求更好的给客户</p>
+        </div>
+        <div class="tedian3">
+            <div>
+                <a href="flowpath.html">
+                    <i></i>
+                    <p>西服定制</p>
+                </a>
+            </div>
+            <div>
+                <a href="flowpath.html">
+                    <i></i>
+                    <p>工装定制</p>
+                </a>
+            </div>
+            <div>
+                <a href="flowpath.html">
+                    <i></i>
+                    <p>衬衫定制</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page4">
+        <div class="title4">
+            <h2>企业服装定制</h2>
+            <i></i>
+            <p>上门量体 专业定制</p>
+        </div>
+        <div class="btn">
+            <a href=""  class="smls">上门量身</a>
+            <a href="product.html"  class="zxxk">在线选款</a>
+        </div>
+        <div class="lianxi">
+            <p>上海地区24小时内上门量身</br>
+                其他地区请咨询客服
+            </p>
+            <span>
+                QQ：623712138</br>
+                邮箱：623712138@qq.com</br>
+                联系电话：021-64522388</br>
+                公司地址：上海市闵行区</br>
+            </span>
+        </div>
+        <div class="tedian4">
+            <!-- <img src="images/23.jpg" alt="" /> -->
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <a href="index.html">企业首页</a>|
+            <a href="product.html">产品信息</a>|
+            <a href="flowpath.html">定制流程</a>|
+            <a href="introduce.html">公司介绍</a>|
+            <a href="lianxi.html">联系我们</a>|
+            <p>上海赛康服饰有限公司&nbsp;&nbsp;定制热线:021-64522388</p>
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+//中文文字动态
+        $(".china").animate({"left":100},500);
+    });
+
+    $(window).scroll(function(){
+
+        var scrollTop = $(window).scrollTop();
+        // 业务1；当滚动距离大于650时，特点2项目显示
+            if( scrollTop >650){
+                 $(".tedian2").animate({"bottom":180},500);
+            }
+        // 业务2；当滚动距离大于1450时，特点3项目显示
+            if(scrollTop >1450){
+                $(".tedian3 div").each(function(index,el){
+                     $(el).delay(400*index).fadeIn();
+                });
+            }
+
+         //漂浮广告
+        $(".sildernav").stop(true).animate({"top":$(window).scrollTop()+320},515)
+
+    });
+
+ //关闭漂浮广告
+    $(".sildernav .qvxiao").click(function(){
+        $(".sildernav").hide();
+    });
+
+    $(".rocket").click(function(){
+        var idx = 0;
+        $("body").stop(true).animate({"scrollTop":0},1500);
+        var timer = setInterval(function(){
+            idx++;
+            if(idx >5){
+                idx = 0;
+                clearInterval(timer);
+            }
+            $(".rocket").css("background-position",-149*idx + "px 0px");
+        },300);
+    });
+
+
+</script>

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration:none;
+        }
+ ol, ul ,li{list-style: none;}
+        .header{
+            width: 100%;
+            height: 598px;
+            background:url('images/dz1.jpg') repeat;
+            margin:0 auto;
+            border: 1px solid #000;
+            margin-bottom: 30px;
+            position:relative;
+        }
+        nav{
+            height:94px;
+            width: 100%;
+            line-height:80px;
+            background:url('images/dht.jpg') repeat;
+            color:#ffffff;
+            overflow:hidden;
+        }
+        nav h1{
+            float:left;
+            font-size:40px;
+            line-height:100px;
+            padding-left:30px;
+        }
+        nav .in{
+            float:right;
+            position:relative;
+            top:14px;
+            width: 810px;
+            height:80px;
+         }
+         nav .in p{
+            width:0px;
+            height:0px;
+            display:block;
+         }
+        nav .in .l{
+            float:left;
+            width:0px;
+            height:0px;
+            display:block;
+            border-bottom:40px solid #7F9240;
+            border-top:40px solid#7F9240;
+            border-left:40px solid transparent;
+            border-right:40px solid #7F9240;
+        }
+        nav .in ul{
+            width:650px;
+            height:80px;
+            float:left;
+            background-color:orange;
+        }
+         nav .in .r{
+            float:right;
+            width:0px;
+            height:0px;
+            display:block;
+            border-bottom:40px solid #94A344;
+            border-top:40px solid #94A344;
+            border-left:40px solid #94A344;
+            border-right:40px solid transparent;
+        }
+        nav .in ul li{
+            float:left;
+            height:80px;
+            width: 130px;
+            line-height:80px;
+            font-size:18px;
+            background:#195591;
+            position:relative;
+        }
+        nav .in ul li a{
+            color:#ffffff;
+            height:80px;
+            width: 130px;
+            display: block;
+            text-align:center;
+            background:url('images/gr.jpg') repeat;
+            position:absolute;
+            top:0px;
+            left:0;
+            z-index:2;
+        }
+        nav .in ul li i{
+            width: 0px;
+            height:0px;
+            display: block;
+            background:red;
+        }
+        nav .in ul li .left{
+            position:absolute;
+            bottom:-14px;
+            left:0;
+            z-index:1;
+             border-left:7px solid #195591;
+            border-right:7px solid orange;
+            border-top:7px solid orange;
+            border-bottom:7px solid #195591;
+            opacity:0.7;
+        }
+        nav .in ul li .right{
+            position:absolute;
+            bottom:-14px;
+            right:0;
+            z-index:1;
+            border-left:7px solid orange;
+            border-right:7px solid #195591;
+            border-top:7px solid orange;
+            border-bottom:7px solid #195591;
+            opacity:0.7;
+        }
+        nav .in ul li:hover a{
+            top:-14px;
+            width: 130px;
+            height:80px;
+            line-height:80px;
+            transition: all 0.2s linear;
+        }
+        nav .in ul li:hover i{
+            bottom: 0px;
+            transition: all 0.2s linear;
+        }
+        .header img{
+            width: 900px;
+            height:500px;
+            position:absolute;
+            top:98px;
+            left:50%;
+            margin-top:0;
+            margin-left:-450px;
+        }
+
+        .sildernav{
+            width: 200px;
+            height:515px;
+            background:#fff;
+            border:4px solid black;
+            position:absolute;
+            top:50%;
+            right:0;
+            margin-top:-258px;
+            z-index:2;
+        }
+        .sildernav .qvxiao{
+            width: 30px;
+            height:30px;
+            background:red;
+            float:right;
+            text-align:center;
+            line-height:30px;
+            font-size:24px;
+            font-family: 微软雅黑;
+        }
+        .sildernav .insilder h3{
+            font-size:16px;
+            font-family: 宋体;
+            text-align:center;
+            margin:20px auto;
+        }
+        .sildernav .insilder .dh{
+            width: 160px;
+            height:50px;
+            margin: 30px auto;
+        }
+        .sildernav .insilder .dh i{
+            float:left;
+            display: block;
+            width: 30px;
+            height:30px;
+            background:url('images/dh.fw.png') center center;
+            margin-top:10px;
+            background-size:cover;
+        }
+        .sildernav .insilder .dh span{
+            display: block;
+            font-size:14px;
+            font-family: 宋体;
+            text-align:center;
+            line-height:25px;
+            margin-top:10px;
+        }
+        .sildernav .insilder .dh p{
+            font-size:18px;
+            font-family: 宋体;
+            font-weight:bold;
+            color:red;
+            line-height:20px;
+            text-align:center;
+        }
+       .sildernav .insilder .xx{
+            width: 160px;
+            height:200px;
+            margin-left:20px;
+        }
+        .sildernav .insilder .xx span{
+            display: block;
+            margin-top:15px;
+            font-size:12px;
+            font-family: 微软雅黑;
+        }
+        .sildernav .insilder .xx span b{
+            font-size:14px;
+            font-family: 微软雅黑;
+            }
+        .sildernav .insilder .kf{
+            width: 142px;
+            height:170px;
+            margin:10px auto;
+            margin-top:10px;
+            background:yellow;
+            background:url('images/kh.fw.png') center center;
+            background-size:contain;
+        }
+        .floor{
+            width: 910px;
+            height: 711px;
+            margin:0 auto;
+            margin-bottom: 30px;
+            padding:20px;
+            }
+        .floor h1{
+            width:100%;
+            font-size:24px;
+            font-family: 微软雅黑;
+            padding-left:20px;
+            }
+        .floor h1 span{
+            display: inline-block;
+            font-size:14px;
+            font-family: 微软雅黑;
+            margin-left:10px;
+            }
+        .floor ul li{
+            width:300px;
+            height:350px;
+            border:20px solid #fff;
+            box-sizing:border-box;
+            float:left;
+            position:relative;
+            overflow:hidden;
+        }
+        .floor ul li span{
+            display: block;
+            width: 30px;
+            height:80px;
+            background:red;
+            float:left;
+            font-size:18px;
+            text-align:center;
+            padding-top:60px;
+            float:right;
+            position:relative;
+        }
+        .floor ul li span::after {
+            content: "";
+            display: block;
+            width: 0px;
+            height:0px;
+            position:absolute;
+            top:0;
+            right: 0;
+            border-top:15px solid #fff;
+            border-bottom:15px solid yellow;
+            border-left:15px solid yellow;
+            border-right:15px solid #fff;
+        }
+        .floor ul li img{
+            width: 230px;
+            height:310px;
+            float:right;
+            overflow:hidden;
+        }
+        .floor ul li .con{ width:190px; height:270px; background:#333; position:absolute; left:-230px; top:0px;
+            filter:Alpha(opacity=80);-moz-opacity: 0.8; opacity: 0.8; padding:20px; -webkit-transition:left 0.5s ease; }
+        .floor .con h3{height:30px; color:#fff; font-size:18px; font-family:"微软雅黑"; text-align:center; position:relative;
+                left:-288px; -webkit-transition:left 1s ease; }
+        .floor .con p{line-height:25px; font-size:14px; color:#fff; position:relative; left:-288px;-webkit-transition:left 1s ease; font-family:"微软雅黑"; margin-bottom:5px; }
+        .floor .con p b{
+        font-weight: bold;padding-left:0px;
+        }
+        .floor .con p i{
+            display: block;
+            padding-left:20px;
+            font-style:normal;
+        }
+        .floor ul li:hover .con{left:0px;}
+        .floor ul li:hover h3{left:0px; }
+        .floor ul li:hover p{left:0px; }
+
+        .navLeft{
+            position: fixed;
+            width: 40px;
+            height: 240px;
+            background-color:purple;
+            left:10px;
+            top:50%;
+            margin-top: -20px;
+            display:none;
+        }
+        .navLeft ul li{
+            width: 40px;
+            height: 39px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+            line-height: 39px;
+            cursor:pointer;
+        }
+        .navLeft ul li.cur{
+            background-color:gold;
+        }
+         .footer{
+            width: 100%;
+            height:34px;
+            background:url('images/dht.jpg') repeat;
+            color:#fff;
+            padding:30px 0;
+        }
+        .footer div{
+            width: 500px;
+            height:50px;
+            margin:0 auto;
+            text-align:center;
+        }
+        .footer a{
+            color:#fff;
+            padding:0 5px;
+            text-align:center;
+        }
+        .footer p{
+            color:#fff;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+<!--[if gte IE 6]>
+        <h1 class="red">您的浏览器版本过低，不支持新样式，请使用谷歌浏览器</h1>
+    <![endif]-->
+
+    <nav>
+        <h1>赛康制服</h1>
+        <div class="in">
+            <p class="l"></p>
+            <ul>
+                <li><i class="left"></i><a href="index.html">企业首页</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="product.html">产品信息</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="flowpath.html">定制流程</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="introduce.html">公司介绍</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="lianxi.html">联系我们</a><i class="right"></i></li>
+            </ul>
+            <p class="r"></p>
+        </div>
+    </nav >
+    <div class="navLeft">
+        <ul>
+            <li class="cur">工装</li>
+            <li>衬衫</li>
+            <li>西装</li>
+            <li>医院</li>
+            <li>酒店</li>
+            <li>围裙</li>
+        </ul>
+    </div>
+    <div class="header">
+
+        <img src="images/dz.jpg" alt="" />
+    </div>
+    <div class="sildernav">
+        <div class="qvxiao">X</div>
+        <div class="insilder">
+            <h3>联系赛康制服</h3>
+            <div class="dh">
+                <i></i>
+                <span>定制服务热线</span>
+                <p>021-64522388</p>
+            </div>
+            <div class="xx">
+                <span>
+                    <b>电话</b></br>
+                    021-64522388</br>
+                </span>
+                <span>
+                    <b>QQ</b></br>
+                    623712138</br>
+                </span>
+                <span>
+                    <b>邮箱</b></br>
+                    623712138@qq.com</br>
+                </span>
+                <span>
+                    <b>地址</b></br>
+                    上海市闵行区</br>
+                </span>
+                <div class="kf">
+                  <!--   <img src="images/kh.fw.png" alt="" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="floor floor1">
+        <h1>工装<span>/Coverall</span></h1>
+        <ul>
+            <li>
+                <span>工装 1</span>
+                <img src="images/GZ-002.jpg" alt="" />
+                <div class="con">
+                    <h3>工装</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋、冬</i></p>
+                    <p><b>适应行业 : </b><br/><i>电力、机场、汽修、工厂</i></p>
+                    <p><b>商品特点 : </b><br/><i>吸湿性强、透气性强、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+            <li>
+                <span>工装 2</span>
+                <img src="images/GZ-007.jpg" alt="" />
+                <div class="con">
+                    <h3>工装</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋、冬</i></p>
+                    <p><b>适应行业 : </b><br/><i>电力、机场、汽修、工厂</i></p>
+                    <p><b>商品特点 : </b><br/><i>吸湿性强、透气性强、不起球、无静电、亲肤感强</i></p>
+                </div>
+
+            </li>
+            <li>
+                <span>工装 3</span>
+                <img src="images/GZ-008.jpg" alt="" />
+                <div class="con">
+                    <h3>工装</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋、冬</i></p>
+                    <p><b>适应行业 : </b><br/><i>电力、机场、汽修、工厂</i></p>
+                    <p><b>商品特点 : </b><br/><i>吸湿性强、透气性强、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+            <li>
+                <span>工装 4</span>
+                <img src="images/GZ-015.jpg" alt="" />
+                <div class="con">
+                    <h3>工装</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤卡</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋、冬</i></p>
+                    <p><b>适应行业 : </b><br/><i>电力、机场、汽修、工厂</i></p>
+                    <p><b>商品特点 : </b><br/><i>布面匀整光洁，质朴柔和，定型稳定，吸湿耐磨</i></p>
+                </div>
+            </li>
+            <li>
+                <span>工装 5</span>
+                <img src="images/GZ-016.jpg" alt="" />
+                <div class="con">
+                    <h3>工装</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤卡</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋、冬</i></p>
+                    <p><b>适应行业 : </b><br/><i>电力、机场、汽修、工厂</i></p>
+                    <p><b>商品特点 : </b><br/><i>布面匀整光洁，质朴柔和，定型稳定，吸湿耐磨</i></p>
+                </div>
+            </li>
+            <li>
+                <span>工装 6</span>
+                <img src="images/GZ-020.jpg" alt="" />
+                <div class="con">
+                    <h3>工装</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤卡</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋、冬</i></p>
+                    <p><b>适应行业 : </b><br/><i>电力、机场、汽修、工厂</i></p>
+                    <p><b>商品特点 : </b><br/><i>布面匀整光洁，质朴柔和，定型稳定，吸湿耐磨</i></p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="floor floor2">
+        <h1>衬衫<span>/Shirt</span></h1>
+        <ul>
+            <li>
+                <span>衬衫 1</span>
+                <img src="images/CS-031.jpg" alt="" />
+                <div class="con">
+                    <h3>衬衫</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、航空、公交</i></p>
+                    <p><b>商品特点 : </b><br/><i>布面匀整光洁，质朴柔和，定型稳定，吸湿耐磨</i></p>
+                </div>
+            </li>
+            <li>
+                <span>衬衫 2</span>
+                <img src="images/CS-032.jpg" alt="" />
+                <div class="con">
+                    <h3>衬衫</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、航空、公交</i></p>
+                    <p><b>商品特点 : </b><br/><i>布面匀整光洁，质朴柔和，定型稳定，吸湿耐磨</i></p>
+                </div>
+            </li>
+            <li>
+                <span>衬衫 3</span>
+                <img src="images/CS-045.jpg" alt="" />
+                <div class="con">
+                    <h3>衬衫</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、航空、公交</i></p>
+                    <p><b>商品特点 : </b><br/><i>布面匀整光洁，质朴柔和，定型稳定，吸湿耐磨</i></p>
+                </div>
+            </li>
+            <li>
+                <span>衬衫 4</span>
+                <img src="images/CS-046.jpg" alt="" />
+                <div class="con">
+                    <h3>衬衫</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>夏</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、航空、公交</i></p>
+                    <p><b>商品特点 : </b><br/><i>透气性强、不起皱、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+            <li>
+                <span>衬衫 5</span>
+                <img src="images/CS-033.jpg" alt="" />
+                <div class="con">
+                    <h3>衬衫</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、航空、公交</i></p>
+                    <p><b>商品特点 : </b><br/><i>透布面匀整光洁，质朴柔和，定型稳定，吸湿耐磨</i></p>
+                </div>
+            </li>
+            <li>
+                <span>衬衫 6</span>
+                <img src="images/CS-048.jpg" alt="" />
+                <div class="con">
+                    <h3>衬衫</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、航空、公交</i></p>
+                    <p><b>商品特点 : </b><br/><i>布面匀整光洁，质朴柔和，定型稳定，吸湿耐磨</i></p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="floor floor3">
+        <h1>西装<span>/Suit</span></h1>
+         <ul>
+            <li>
+                <span>西装 1</span>
+                <img src="images/DT-015.jpg" alt="" />
+                <div class="con">
+                    <h3>西装</h3>
+                    <p><b>面料成分 : </b><br/><i>100%羊毛</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、银行、地产、公司</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+            <li>
+                <span>西装 2</span>
+                <img src="images/DT-020.jpg" alt="" />
+                <div class="con">
+                    <h3>西装</h3>
+                    <p><b>面料成分 : </b><br/><i>25%粘纤 75%聚酯纤维</i></p>
+                    <p><b>适合季节 : </b><br/><i>夏、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、银行、地产、公司</i></p>
+                    <p><b>商品特点 : </b><br/><i>坚牢耐用、抗皱免烫、抗皱性和保形性好</i></p>
+                </div>
+            </li>
+            <li>
+                <span>西装 3</span>
+                <img src="images/DT-019.jpg" alt="" />
+                <div class="con">
+                    <h3>西装</h3>
+                    <p><b>面料成分 : </b><br/><i>100%羊毛</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、银行、地产、公司</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+            <li>
+                <span>西装 4</span>
+                <img src="images/DT-016.jpg" alt="" />
+                <div class="con">
+                    <h3>西装</h3>
+                    <p><b>面料成分 : </b><br/><i>25%粘纤 75%聚酯纤维</i></p>
+                    <p><b>适合季节 : </b><br/><i>夏、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、银行、地产、公司</i></p>
+                    <p><b>商品特点 : </b><br/><i>坚牢耐用、抗皱免烫、抗皱性和保形性好</i></p>
+                </div>
+            </li>
+            <li>
+                <span>西装 5</span>
+                <img src="images/DT-012.jpg" alt="" />
+                <div class="con">
+                    <h3>西装</h3>
+                    <p><b>面料成分 : </b><br/><i>100%羊毛</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、银行、地产、公司</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+            <li>
+                <span>西装 6</span>
+                <img src="images/DT-013.jpg" alt="" />
+                <div class="con">
+                    <h3>西装</h3>
+                    <p><b>面料成分 : </b><br/><i>100%羊毛</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、银行、地产、公司</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="floor floor4">
+        <h1>医院<span>/Hospital</span></h1>
+        <ul>
+            <li>
+                <span>医院 1</span>
+                <img src="images/010.jpg" alt="" />
+                <div class="con">
+                    <h3>医院</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>医院、美容、幼师</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+            <li>
+                <span>医院 2</span>
+                <img src="images/011.jpg" alt="" />
+                <div class="con">
+                    <h3>医院</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>医院、美容、幼师</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+            <li>
+                <span>医院 3</span>
+                <img src="images/024.jpg" alt="" />
+                <div class="con">
+                    <h3>医院</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>医院、美容、幼师</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+            <li>
+                <span>医院 4</span>
+                <img src="images/015.jpg" alt="" />
+                <div class="con">
+                    <h3>医院</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>医院、美容、幼师</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+            <li>
+                <span>医院 5</span>
+                <img src="images/038.jpg" alt="" />
+                <div class="con">
+                    <h3>医院</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>医院、美容、幼师</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+            <li>
+                <span>医院 6</span>
+                <img src="images/016.jpg" alt="" />
+                <div class="con">
+                    <h3>医院</h3>
+                    <p><b>面料成分 : </b><br/><i>100%棉</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>医院、美容、幼师</i></p>
+                    <p><b>商品特点 : </b><br/><i>手感柔软，垂直感好，颜色纯正，光泽自然柔和</i></p>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+    <div class="floor floor5">
+        <h1>酒店<span>/Hotel</span></h1>
+        <ul>
+            <li>
+                <span>酒店 1</span>
+                <img src="images/XCT-021.jpg" alt="" />
+                <div class="con">
+                    <h3>酒店</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>透气性强、不起皱、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+            <li>
+                <span>酒店 2</span>
+                <img src="images/XCT-060.jpg" alt="" />
+                <div class="con">
+                    <h3>酒店</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>透气性强、不起皱、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+            <li>
+                <span>酒店 3</span>
+                <img src="images/XCT-057.jpg" alt="" />
+                <div class="con">
+                    <h3>酒店</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>透气性强、不起皱、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+            <li>
+                <span>酒店 4</span>
+                <img src="images/XCT-053.jpg" alt="" />
+                <div class="con">
+                    <h3>酒店</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>透气性强、不起皱、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+            <li>
+                <span>酒店 5</span>
+                <img src="images/XCT-051.jpg" alt="" />
+                <div class="con">
+                    <h3>酒店</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>透气性强、不起皱、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+            <li>
+                <span>酒店 6</span>
+                <img src="images/XCT-025.jpg" alt="" />
+                <div class="con">
+                    <h3>酒店</h3>
+                    <p><b>面料成分 : </b><br/><i>65%棉 35%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、西餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>透气性强、不起皱、不起球、无静电、亲肤感强</i></p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="floor floor6">
+        <h1>围裙<span>/Apron</span></h1>
+        <ul>
+            <li>
+                <span>围裙 1</span>
+                <img src="images/MR-012.jpg" alt="" />
+                <div class="con">
+                    <h3>围裙</h3>
+                    <p><b>面料成分 : </b><br/><i>防水布</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、夏、秋、冬</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>不起皱、无静电、易清洗、防油污</i></p>
+                </div>
+            </li>
+            <li>
+                <span>围裙 2</span>
+                <img src="images/MR-016.jpg" alt="" />
+                <div class="con">
+                    <h3>围裙</h3>
+                    <p><b>面料成分 : </b><br/><i>100%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>不起皱、无静电、易清洗、防油污</i></p>
+                </div>
+            </li>
+            <li>
+                <span>围裙 3</span>
+                <img src="images/WQ-040.jpg" alt="" />
+                <div class="con">
+                    <h3>围裙</h3>
+                    <p><b>面料成分 : </b><br/><i>防水布</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>不起皱、无静电、易清洗、防油污</i></p>
+                </div>
+            </li>
+            <li>
+                <span>围裙 4</span>
+                <img src="images/WQ-031.jpg" alt="" />
+                <div class="con">
+                    <h3>围裙</h3>
+                    <p><b>面料成分 : </b><br/><i>100%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>不起皱、无静电、易清洗、防油污</i></p>
+                </div>
+            </li>
+            <li>
+                <span>围裙 5</span>
+                <img src="images/WQ-032.jpg" alt="" />
+                <div class="con">
+                    <h3>围裙</h3>
+                    <p><b>面料成分 : </b><br/><i>防水布</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>不起皱、无静电、易清洗、防油污</i></p>
+                </div>
+            </li>
+            <li>
+                <span>围裙 6</span>
+                <img src="images/WQ-038.jpg" alt="" />
+                <div class="con">
+                    <h3>围裙</h3>
+                    <p><b>面料成分 : </b><br/><i>100%涤纶</i></p>
+                    <p><b>适合季节 : </b><br/><i>春、秋</i></p>
+                    <p><b>适应行业 : </b><br/><i>酒店、餐厅、茶馆、面包房</i></p>
+                    <p><b>商品特点 : </b><br/><i>不起皱、无静电、易清洗、防油污</i></p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+   <div class="footer">
+        <div>
+            <a href="index.html">企业首页</a>|
+            <a href="product.html">产品信息</a>|
+            <a href="flowpath.html">定制流程</a>|
+            <a href="introduce.html">公司介绍</a>|
+            <a href="lianxi.html">联系我们</a>|
+            <p>上海赛康服饰有限公司&nbsp;&nbsp;定制热线:021-64522388</p>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        // 业务1；检查滚动是不是趋近第一个floor1，快到200像素的时候我会显示滚动条
+        if( scrollTop > $(".floor1").offset().top - 300){
+           $(".navLeft").stop(true).fadeIn(100);
+        }else{
+           $(".navLeft").stop(true).fadeOut(100);
+        }
+        // 业务2：判断当前是第几个楼层，队形导航条
+        $(".floor").each(function(i){
+            if( scrollTop >= $(this).offset().top){
+               $(".navLeft ul li").eq(i).addClass("cur").siblings().removeClass("cur");
+            }
+        });
+
+
+        $(".sildernav").stop(true).animate({"top":$(window).scrollTop()+320},515)
+    });
+    // 业务三，单机导航的时候跳到相应的楼层
+
+     $(".navLeft ul li").click(function(){
+        $("body").animate({"scrollTop":$(".floor").eq($(this).index()).offset().top},500)
+
+     });
+
+
+
+     $(".sildernav .qvxiao").click(function(){
+        $(".sildernav").hide();
+    });
+</script>

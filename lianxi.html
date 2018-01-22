@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+            list-style:none;
+            text-decoration:none;
+        }
+        nav{
+            height:94px;
+            width: 100%;
+            line-height:80px;
+            background:url('images/dht.jpg') repeat;
+            color:#ffffff;
+            overflow:hidden;
+        }
+        nav h1{
+            float:left;
+            font-size:40px;
+            line-height:100px;
+            padding-left:30px;
+        }
+        nav .in{
+            float:right;
+            position:relative;
+            top:14px;
+            width: 810px;
+            height:80px;
+         }
+         nav .in p{
+            width:0px;
+            height:0px;
+            display:block;
+         }
+        nav .in .l{
+            float:left;
+            width:0px;
+            height:0px;
+            display:block;
+            border-bottom:40px solid #7F9240;
+            border-top:40px solid#7F9240;
+            border-left:40px solid transparent;
+            border-right:40px solid #7F9240;
+        }
+        nav .in ul{
+            width:650px;
+            height:80px;
+            float:left;
+            background-color:orange;
+        }
+         nav .in .r{
+            float:right;
+            width:0px;
+            height:0px;
+            display:block;
+            border-bottom:40px solid #94A344;
+            border-top:40px solid #94A344;
+            border-left:40px solid #94A344;
+            border-right:40px solid transparent;
+        }
+        nav .in ul li{
+            float:left;
+            height:80px;
+            width: 130px;
+            line-height:80px;
+            font-size:18px;
+            background:#195591;
+            position:relative;
+        }
+        nav .in ul li a{
+            color:#ffffff;
+            height:80px;
+            width: 130px;
+            display: block;
+            text-align:center;
+            background:url('images/gr.jpg') repeat;
+            position:absolute;
+            top:0px;
+            left:0;
+            z-index:2;
+        }
+        nav .in ul li i{
+            width: 0px;
+            height:0px;
+            display: block;
+            background:red;
+        }
+        nav .in ul li .left{
+            position:absolute;
+            bottom:-14px;
+            left:0;
+            z-index:1;
+             border-left:7px solid #195591;
+            border-right:7px solid orange;
+            border-top:7px solid orange;
+            border-bottom:7px solid #195591;
+            opacity:0.7;
+        }
+        nav .in ul li .right{
+            position:absolute;
+            bottom:-14px;
+            right:0;
+            z-index:1;
+            border-left:7px solid orange;
+            border-right:7px solid #195591;
+            border-top:7px solid orange;
+            border-bottom:7px solid #195591;
+            opacity:0.7;
+        }
+        nav .in ul li:hover a{
+            top:-14px;
+            width: 130px;
+            height:80px;
+            line-height:80px;
+            transition: all 0.2s linear;
+        }
+        nav .in ul li:hover i{
+            bottom: 0px;
+            transition: all 0.2s linear;
+        }
+        .box{
+            width: 100%;
+            height:650px;
+            background:url("images/timg3.jpg") no-repeat;
+            position:relative;
+
+        }
+        .box .lx{
+            width: 400px;
+            height:300px;
+            color:#fff;
+            position:absolute;
+            top:50%;
+            left:0;
+            margin-top:-150px;
+            margin-left:100px;
+        }
+        .box .lx p{
+            font-size:18px;
+            font-family: 微软雅黑;
+            font-weight:bold;
+            margin-top:50px;
+            line-height:30px;
+        }
+        .box .lx span{
+            font-size:16px;
+            font-family: 微软雅黑;
+            display: block;
+            line-height:25px;
+            margin-top:40px;
+        }
+    .footer{
+            width: 100%;
+            height:34px;
+            background:url('images/dht.jpg') repeat;
+            color:#fff;
+            padding:30px 0;
+        }
+        .footer div{
+            width: 500px;
+            height:50px;
+            margin:0 auto;
+            text-align:center;
+        }
+        .footer a{
+            color:#fff;
+            padding:0 5px;
+            text-align:center;
+        }
+        .footer p{
+            color:#fff;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>赛康制服</h1>
+        <div class="in">
+            <p class="l"></p>
+            <ul>
+                <li><i class="left"></i><a href="index.html">企业首页</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="product.html">产品信息</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="flowpath.html">定制流程</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="introduce.html">公司介绍</a><i class="right"></i></li>
+                <li><i class="left"></i><a href="lianxi.html">联系我们</a><i class="right"></i></li>
+            </ul>
+            <p class="r"></p>
+        </div>
+    </nav >
+    <div class="box">
+
+        <div class="lx">
+            <p>上海地区24小时内上门量身</br>
+                其他地区请咨询客服
+            </p>
+            <span>
+                QQ：623712138</br>
+                邮箱：623712138@qq.com</br>
+                联系电话：021-64522388</br>
+                公司地址：上海市闵行区</br>
+            </span>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <a href="index.html">企业首页</a>|
+            <a href="product.html">产品信息</a>|
+            <a href="flowpath.html">定制流程</a>|
+            <a href="introduce.html">公司介绍</a>|
+            <a href="lianxi.html">联系我们</a>|
+            <p>上海赛康服饰有限公司&nbsp;&nbsp;定制热线:021-64522388</p>
+        </div>
+    </div>
+</body>
+</html>
